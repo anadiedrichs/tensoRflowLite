@@ -2,7 +2,9 @@
 
 Let's R works closer to the Internet of Things.
 
-Porting of tensorflow lite for R [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+Porting of tensorflow lite for R 
+
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 ## Why this repo
 
