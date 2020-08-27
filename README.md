@@ -1,5 +1,8 @@
 # tensoRflowLite
-porting of tensorflow lite for R [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+
+Let's R works closer to the Internet of Things.
+
+Porting of tensorflow lite for R [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 ## Why this repo
 
@@ -25,19 +28,23 @@ The model must be small enough to fit on your target device after conversion, an
 
 #### 2) Convert the model to a TensorFlow Lite FlatBuffer
 
-tensoRflowLite_SHOULD_Help_HEre 
+*tensoRflowLite_SHOULD_Help_HEre* 
 
 You will convert your model into the standard TensorFlow Lite format using the TensorFlow Lite converter. You may wish to output a quantized model, since these are smaller in size and more efficient to execute.
 
 #### 3) Convert the FlatBuffer to a C byte array
 
-tensoRflowLite_SHOULD_Help_HEre 
+*tensoRflowLite_SHOULD_Help_HEre*
+
 Models are kept in read-only program memory and provided in the form of a simple C file. Standard tools can be used to convert the FlatBuffer into a C array.
 
 #### 4) Integrate the TensorFlow Lite for Microcontrollers C++ library
 
-TO_BE_DONE Write your microcontroller code to collect data, perform inference using the C++ library, and make use of the results.
+*TO_BE_DONE* 
+
+Write your microcontroller code to collect data, perform inference using the C++ library, and make use of the results.
 
 #### 5) Deploy to your device
 
-TO_BE_DONE Build and deploy the program to your device.
+*TO_BE_DONE* 
+Build and deploy the program to your device.
