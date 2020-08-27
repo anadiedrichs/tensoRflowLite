@@ -41,3 +41,33 @@ hex <- str_sub(hex, end=-2) # elimino la ultima coma en hex
 stringr::str_glue("unsigned char model[] = {{ {hex} }};
 unsigned int model_len = {len};")
 
+################################################33
+file_tf <- "modeltf.tflite"
+
+file_size <- file.info(file_tf)$size
+
+a_vector <- vector(mode="raw",length = file_size)
+
+zz <- file(file_tf,"rb")
+
+a_vector <- readBin(con=zz,what=raw(), size = 1,signed = FALSE,n=file_size)
+
+#for(i in 1:file_size){
+#  a_vector[i] <- readBin(con=zz,what=raw(), size = 1,signed = FALSE)
+#}
+
+hexas <- stringr::str_c("0x",a_vector,sep="")
+len <- length(hexas)
+
+# concatenar "0x32", para ir armando el array en el struct
+hex <- stringr::str_glue("{hexas},")
+hex <- stringr::str_flatten(hex)
+hex <- stringr::str_sub(hex, end=-2) # elimino la ultima coma en hex
+
+
+# doble llave para que la muestre 
+cadena_a_guardar <- stringr::str_glue("unsigned char model[] = {{ {hex} }};
+unsigned int model_len = {len};")
+
+# guardar el archivo en C para microcontroladores
+write(cadena_a_guardar,file="archivo.c")
