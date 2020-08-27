@@ -1,5 +1,5 @@
 # tensoRflowLite
-porting of tensorflow lite for R (experimental)
+porting of tensorflow lite for R [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 ## Why this repo
 
