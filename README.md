@@ -6,6 +6,12 @@ Porting of tensorflow lite for R [![experimental](http://badges.github.io/stabil
 
 ## Why this repo
 
+There is a library in tensorflow ecosystem called "tf lite converter" (check the first diagram in https://www.tensorflow.org/lite/convert/index) , which converts a keras or tensorflow saved model in a format suitable for IoT (Internet of Things) devices (32 bit, 8 bit, etc). Then you can move your converted model to your embedded system and run the inference there using the tensorflow inference C/c++ API.
+
+I think it would be great to see a porting of "tensorflow converter" python library to R. Nowadays tensorflow lite is the only open source "mature" alternative for tinyML I found, which has more support, docs, examples, etc.
+
+I would like to know if there are ideas to port tensorflow lite / tensorflow converter library to R, maybe from the current tensorflow R package team.
+
 ## Documentation
 
 For my first test I train a machine learning model with keras + tensorflow over R, to convert it to a tensorflow lite file format.
